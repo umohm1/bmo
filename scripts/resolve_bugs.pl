@@ -42,6 +42,7 @@ $auto_user->{groups} = [ Bugzilla::Group->get_all ];
 $auto_user->{bless_groups} = [ Bugzilla::Group->get_all ];
 Bugzilla->set_user($auto_user);
 
+my $query;
 my $query = { resolution => '---', product => $product };
 $query->{component} = $component if defined $component;
 
